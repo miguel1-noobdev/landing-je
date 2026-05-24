@@ -130,20 +130,20 @@ img {
     background-color: var(--clr-text-main);
 }
 
-/* 🏔️ Hero Section */
+/* ️ Hero Section — Full viewport fit */
 .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: var(--space-xl);
-    padding-bottom: var(--space-lg);
+    padding-top: 5rem;
+    padding-bottom: 2rem;
     background: radial-gradient(circle at 80% 20%, var(--clr-bg-alt), transparent 60%);
 }
 
 .hero__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
+    gap: 3rem;
     align-items: center;
 }
 
@@ -151,18 +151,19 @@ img {
     display: inline-block;
     background: var(--clr-bg-alt);
     color: var(--clr-primary);
-    padding: 0.4rem 1rem;
+    padding: 0.35rem 0.9rem;
     border-radius: var(--radius-full);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    margin-bottom: var(--space-sm);
+    margin-bottom: 0.75rem;
 }
 
 .hero__title {
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    margin-bottom: var(--space-md);
+    font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+    margin-bottom: 1rem;
+    line-height: 1.05;
 }
 
 .hero__title span {
@@ -172,15 +173,22 @@ img {
 }
 
 .hero__subtitle {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     color: var(--clr-text-muted);
-    max-width: 500px;
-    margin-bottom: var(--space-lg);
+    max-width: 480px;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
 
 .hero__btns {
     display: flex;
-    gap: var(--space-sm);
+    gap: 0.75rem;
+}
+
+/* Smaller buttons for compact hero */
+.hero__btns .btn {
+    padding: 0.75rem 1.6rem;
+    font-size: 0.9rem;
 }
 
 .hero__visual {
@@ -193,7 +201,8 @@ img {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    aspect-ratio: 4/5;
+    aspect-ratio: 3/4;
+    max-height: 75vh;
 }
 
 .hero__video {
