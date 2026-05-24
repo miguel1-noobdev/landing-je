@@ -117,4 +117,107 @@ document.addEventListener('DOMContentLoaded', () => {
         
         videoObserver.observe(heroVideo);
     }
+
+    // 6. Gallery 3D Coverflow Carousel
+    const track = document.querySelector('.gallery__track');
+    const slides = document.querySelectorAll('.gallery__slide');
+    const prevBtn = document.querySelector('.gallery__arrow--prev');
+    const nextBtn = document.querySelector('.gallery__arrow--next');
+    
+    if (track && slides.length > 0) {
+        let currentIndex = 0;
+        
+        function updateCarousel() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'prev', 'next', 'far');
+                
+                const diff = index - currentIndex;
+                
+                if (diff === 0) {
+                    slide.classList.add('active');
+                } else if (diff === -1 || (currentIndex === 0 && index === slides.length - 1)) {
+                    slide.classList.add('prev');
+                } else if (diff === 1 || (currentIndex === slides.length - 1 && index === 0)) {
+                    slide.classList.add('next');
+                } else {
+                    slide.classList.add('far');
+                }
+            });
+        }
+        
+        function goToSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            currentIndex = index;
+            updateCarousel();
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+        }
+        
+        // Click on side slides to center them
+        slides.forEach((slide, index) => {
+            slide.addEventListener('click', () => {
+                if (index !== currentIndex) {
+                    goToSlide(index);
+                }
+            });
+        });
+        
+        // Drag support
+        let isDragging = false;
+        let startX = 0;
+        let dragThreshold = 50;
+        
+        track.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+        });
+        
+        track.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+        });
+        
+        track.addEventListener('mouseup', (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+            const diff = e.clientX - startX;
+            if (Math.abs(diff) > dragThreshold) {
+                if (diff > 0) {
+                    goToSlide(currentIndex - 1);
+                } else {
+                    goToSlide(currentIndex + 1);
+                }
+            }
+        });
+        
+        track.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+        
+        // Touch support
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+        
+        track.addEventListener('touchend', (e) => {
+            const diff = e.changedTouches[0].clientX - startX;
+            if (Math.abs(diff) > dragThreshold) {
+                if (diff > 0) {
+                    goToSlide(currentIndex - 1);
+                } else {
+                    goToSlide(currentIndex + 1);
+                }
+            }
+        }, { passive: true });
+        
+        // Initialize
+        updateCarousel();
+    }
 });
