@@ -2,18 +2,24 @@
 
 @media (max-width: 1100px) {
     .container {
-        padding: 0 4%;
+        padding: 0 1rem;
     }
     
     .hero__title {
-        font-size: 4rem;
+        font-size: 3.5rem;
+    }
+    
+    .nav__container {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
 @media (max-width: 900px) {
     /* Navigation Bar Mobile Layout */
     .nav__container {
-        padding: 0 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     .nav__actions.desktop-only {

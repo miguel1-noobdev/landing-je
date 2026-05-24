@@ -30,15 +30,15 @@
 
 /* Stats Counter Section Styling */
 .stats {
-    padding: var(--space-xl) 0;
+    padding: 3rem 0;
     background: var(--clr-bg-alt);
     border-top: 1px solid var(--clr-bg-alt); /* Placeholder for visual break */
 }
 
 .stats__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
     text-align: center;
 }
 
