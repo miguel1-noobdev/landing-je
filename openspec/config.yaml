@@ -1,0 +1,32 @@
+project:
+  name: "jess-nails-landing"
+  description: "Landing page profesional para Jess Nails & Hair - Salón de belleza"
+  language: "es"
+  scope: "Landing page completa con deploy a VPS propio, CI/CD con GitHub Actions"
+
+sdd:
+  mode: "interactive"
+  artifact_store: "openspec"
+  pr_strategy: "auto-forecast"
+  review_budget_lines: 400
+
+repository:
+  type: "git"
+  url: "https://github.com/migue-dev/jess-nails-landing"
+  branch: "main"
+
+vps:
+  host: "212.227.149.125"
+  user: "migue"
+  domain: "jessnails.ia-solutions.duckdns.org"
+  path: "/home/migue/webs/jessnails"
+  ssl: true
+
+tech_stack:
+  frontend: ["HTML5", "CSS3", "JavaScript Vanilla", "GSAP"]
+  server: ["Nginx"]
+  ci_cd: ["GitHub Actions"]
+
+strict_tdd: false
+
+test_command: null

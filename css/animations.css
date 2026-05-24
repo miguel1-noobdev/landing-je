@@ -1,0 +1,61 @@
+/* 🎬 JESS NAILS & HAIR — MOTION SYSTEM (GSAP & SCROLL) */
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: none; /* GSAP will handle the animation */
+}
+
+/* Base fade-in state */
+.fade-in {
+    opacity: 0;
+}
+
+/* Glass Floating Badges (Hero) */
+.glass-badge {
+    position: absolute;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: var(--shadow-float);
+    z-index: 10;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Stats Counter Section Styling */
+.stats {
+    padding: var(--space-xl) 0;
+    background: var(--clr-bg-alt);
+    border-top: 1px solid var(--clr-bg-alt); /* Placeholder for visual break */
+}
+
+.stats__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    text-align: center;
+}
+
+.stat-item__number {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+    background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-item__label {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    color: var(--clr-text-muted);
+}

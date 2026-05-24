@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jess Nails & Hair — Premium Beauty Experience</title>
+    <meta name="description" content="Descubre Jess Nails & Hair. Tu salón de belleza premium con servicios de manicura, pedicura y peluquería en un ambiente de lujo relajante.">
+    <meta name="keywords" content="salón de uñas, peluquería, manicura premium, pedicura luxury, Jess Nails Madrid">
+    <meta name="author" content="Jess Nails & Hair">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ia-solutions.duckdns.org/jessnails/">
+    <meta property="og:title" content="Jess Nails & Hair — Premium Beauty Experience">
+    <meta property="og:description" content="Salón de belleza premium en Madrid. Manicura, peluquería y spa en un ambiente de lujo.">
+    <meta property="og:image" content="https://ia-solutions.duckdns.org/jessnails/images/hero-image1.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ia-solutions.duckdns.org/jessnails/">
+    <meta property="twitter:title" content="Jess Nails & Hair — Premium Beauty Experience">
+    <meta property="twitter:description" content="Salón de belleza premium en Madrid. Manicura, peluquería y spa en un ambiente de lujo.">
+    <meta property="twitter:image" content="https://ia-solutions.duckdns.org/jessnails/images/hero-image1.jpg">
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Jess Nails & Hair",
+      "image": "https://ia-solutions.duckdns.org/jessnails/images/hero-image1.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle de la Belleza, 42",
+        "addressLocality": "Madrid",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34-912-345-678",
+      "email": "hola@jessnails.com",
+      "url": "https://ia-solutions.duckdns.org/jessnails/",
+      "priceRange": "$$",
+      "openingHours": "Mo-Sa 10:00-20:00"
+    }
+    </script>
+
+    <!-- Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts: Editorial Serif + Modern UI Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS (Order: Tokens -> Base Styles -> Animations -> Responsive) -->
+    <link rel="stylesheet" href="css/design-tokens.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Libraries (GSAP) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+<body class="is-premium-light">
+    
+    <!-- 🧭 Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__logo">
+                    <h1>Jess Nails <span>& Hair</span></h1>
+                </div>
+                <button class="nav__toggle" aria-label="Abrir menú">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+                <div class="nav__actions desktop-only">
+                    <a href="#contacto" class="btn btn--primary">Reservar Cita</a>
+                </div>
+                <ul class="nav__menu">
+                    <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="#galeria" class="nav__link">Galería</a></li>
+                    <li class="nav__item"><a href="#testimonios" class="nav__link">Experiencia</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 🏔️ Hero Section (Premium Asymmetric) -->
+        <section id="inicio" class="hero">
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <span class="hero__badge reveal-up">Luxury Salon Experience</span>
+                    <h2 class="hero__title reveal-up">Elevamos la <br><span>Belleza</span> de tus Manos</h2>
+                    <p class="hero__subtitle reveal-up">Donde el arte de la manicura se encuentra con el cuidado del cabello en un entorno de paz absoluta.</p>
+                    <div class="hero__btns reveal-up">
+                        <a href="#servicios" class="btn btn--primary">Explorar Servicios</a>
+                        <a href="#galeria" class="btn btn--outline">Ver Galería</a>
+                    </div>
+                </div>
+                
+                <div class="hero__visual reveal-up" style="transition-delay: 0.2s;">
+                    <div class="hero__img-container">
+                        <img src="images/hero-image1.jpg" alt="Experiencia Premium Jess Nails" class="hero__img">
+                        
+                        <!-- 💎 Glass Floating Badges (Webflow Style) -->
+                        <div class="glass-badge badge--1" style="top: 10%; right: -10%;">
+                            <span>💅</span> +5k Clientas Felices
+                        </div>
+                        <div class="glass-badge badge--2" style="bottom: 20%; left: -15%;">
+                            <span>🏆</span> Calidad Certificada
+                        </div>
+                        <div class="glass-badge badge--3" style="bottom: 5%; right: 5%;">
+                            <span>🧴</span> Productos Organic
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📊 Stats Section (Agent Motion Task) -->
+        <section class="stats">
+            <div class="container stats__grid">
+                <div class="stat-item reveal-up">
+                    <span class="stat-item__number" data-target="98.5" data-suffix="%" data-float="true">0%</span>
+                    <p class="stat-item__label">Satisfacción</p>
+                </div>
+                <div class="stat-item reveal-up" style="transition-delay: 0.1s;">
+                    <span class="stat-item__number" data-target="10" data-suffix="+">0</span>
+                    <p class="stat-item__label">Años de Arte</p>
+                </div>
+                <div class="stat-item reveal-up" style="transition-delay: 0.2s;">
+                    <span class="stat-item__number" data-target="24" data-suffix="k">0</span>
+                    <p class="stat-item__label">Diseños Creados</p>
+                </div>
+                <div class="stat-item reveal-up" style="transition-delay: 0.3s;">
+                    <span class="stat-item__number" data-target="15" data-suffix="m" data-float="true">0</span>
+                    <p class="stat-item__label">Tiempo de Relax</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 💆 Servicios (Grid con Reveal) -->
+        <section id="servicios" class="services">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="tagline">Tratamientos Exclusivos</span>
+                    <h2 class="section-title">Nuestros Servicios</h2>
+                </div>
+                <div class="services__grid">
+                    <div class="service-card reveal-up">
+                        <div class="service-card__icon">💅</div>
+                        <h3 class="service-card__title">Nail Art & Manicura</h3>
+                        <p class="service-card__description">Diseños personalizados con las últimas tendencias y materiales de alta gama.</p>
+                        <span class="service-card__price">Desde 25€</span>
+                    </div>
+                    <div class="service-card reveal-up">
+                        <div class="service-card__icon">💇‍♀️</div>
+                        <h3 class="service-card__title">Hair Styling</h3>
+                        <p class="service-card__description">Cortes, peinados y tratamientos capilares para una melena radiante.</p>
+                        <span class="service-card__price">Desde 35€</span>
+                    </div>
+                    <div class="service-card reveal-up">
+                        <div class="service-card__icon">✨</div>
+                        <h3 class="service-card__title">Pedicura Spa</h3>
+                        <p class="service-card__description">Cuidado intensivo para tus pies en sillones de masaje envolvente.</p>
+                        <span class="service-card__price">Desde 30€</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🖼️ Galería (Reveal Stagger) -->
+        <section id="galeria" class="gallery">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="tagline">Inspiración Real</span>
+                    <h2 class="section-title">Últimos Trabajos</h2>
+                </div>
+                <div class="gallery__grid">
+                    <div class="gallery__item reveal-up"><img src="images/gallery-1.jpg" alt="Manicura Arte"></div>
+                    <div class="gallery__item reveal-up"><img src="images/gallery-2.jpg" alt="Peluquería Estilo"></div>
+                    <div class="gallery__item reveal-up"><img src="images/gallery-3.jpg" alt="Nail Extension"></div>
+                    <div class="gallery__item reveal-up"><img src="images/gallery-4.jpg" alt="Color Capilar"></div>
+                    <div class="gallery__item reveal-up"><img src="images/gallery-5.jpg" alt="Spa Experience"></div>
+                    <div class="gallery__item reveal-up"><img src="images/gallery-6.jpg" alt="Detalle Manos"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 💬 Testimonios (Experiencia) -->
+        <section id="testimonios" class="testimonials">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="tagline">Experiencias Reales</span>
+                    <h2 class="section-title">Lo que dicen nuestras clientas</h2>
+                </div>
+                <div class="testimonials__grid">
+                    <div class="testimonial-card reveal-up">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">"Jess tiene unas manos mágicas. Mi manicura duró más de 3 semanas intacta. El ambiente del salón es súper relajante."</p>
+                        <div class="testimonial-card__author">
+                            <strong>María G.</strong>
+                            <span>Cliente habitual</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">"Por fin encontré un sitio donde entienden lo que pido. El nail art que me hicieron fue exactamente lo que tenía en mente."</p>
+                        <div class="testimonial-card__author">
+                            <strong>Laura S.</strong>
+                            <span>Primera visita</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">"El pack completo de manicura + peluquería es la mejor inversión. Salgo renovada y lista para todo. Totalmente recomendado."</p>
+                        <div class="testimonial-card__author">
+                            <strong>Carmen R.</strong>
+                            <span>Cliente VIP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 💌 Contacto -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <div class="contact__wrapper reveal-up">
+                    <div class="contact__card">
+                        <div class="contact__info">
+                            <h2 class="contact__title">Reserva tu Momento</h2>
+                            <p>Déjanos cuidar de ti. Estamos en el corazón de la ciudad esperando tu visita.</p>
+                            <div class="contact__list">
+                                <div class="c-item"><strong>📍 Dirección:</strong> Calle de la Belleza, 42, Madrid</div>
+                                <div class="c-item"><strong>📞 Teléfono:</strong> +34 912 345 678</div>
+                                <div class="c-item"><strong>📧 Email:</strong> hola@jessnails.com</div>
+                            </div>
+                        </div>
+                        <div class="contact__form-side">
+                            <form id="contactForm" class="form">
+                                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                                <input type="email" name="email" placeholder="Correo electrónico" required>
+                                <select name="servicio" required>
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="manicura">Manicura / Nail Art</option>
+                                    <option value="peluqueria">Peluquería</option>
+                                    <option value="completo">Pack Completo</option>
+                                </select>
+                                <textarea name="mensaje" placeholder="¿Alguna petición especial?" rows="4"></textarea>
+                                <button type="submit" class="btn btn--primary btn--full">Enviar Solicitud</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 🌸 Footer -->
+    <footer class="footer">
+        <div class="container footer__bottom">
+            <p>&copy; 2026 Jess Nails & Hair — Excellence in Beauty</p>
+            <div class="footer__socials">
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Interactions -->
+    <script src="js/main.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/counters.js" defer></script>
+</body>
+</html>

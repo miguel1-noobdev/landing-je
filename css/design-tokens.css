@@ -1,0 +1,53 @@
+/* 🎨 JESS NAILS & HAIR — DESIGN TOKENS (PREMIUM PASTEL) */
+
+:root {
+    /* 🌸 Paleta de Colores (Pastel Luxury) */
+    --clr-bg: #FCF9F7;               /* Crema suave / Blanco roto */
+    --clr-bg-alt: #FDF4F2;           /* Rosa empolvado muy claro */
+    --clr-panel: #FFFFFF;            /* Blanco puro para tarjetas */
+    
+    --clr-primary: #FFB7C5;          /* Rosa pastel principal */
+    --clr-secondary: #E0C3FC;        /* Lila suave / Lavanda */
+    --clr-accent: #B8D8BA;           /* Verde salvia claro (Peluquería) */
+    --clr-gold: #D4AF37;             /* Oro mate (Rose Gold vibes) */
+    
+    --clr-text-main: #2D2424;        /* Marrón chocolate muy oscuro (suave que el negro) */
+    --clr-text-muted: #7E6363;       /* Rosa amarronado suave para subtítulos */
+    
+    /* ✨ Glassmorphism (Frosted Glass) */
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-blur: blur(12px);
+    
+    /* 🖋️ Tipografía */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* 📐 Espaciado & Bordes */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 9999px;
+    
+    /* 🎭 Sombras Air (Suaves & Etéreas) */
+    --shadow-soft: 0 10px 40px rgba(255, 183, 197, 0.15);
+    --shadow-float: 0 20px 60px rgba(126, 99, 99, 0.1);
+    
+    /* ⚡ Transiciones */
+    --trans-smooth: 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
+    --trans-fast: 0.2s ease-out;
+}
+
+/* Soporte para Dark Mode (Opcional, pero priorizamos Light para esta versión) */
+@media (prefers-color-scheme: dark) {
+    /* Para esta versión premium pastel, mantendremos el look claro o ajustaremos mínimamente */
+    :root {
+        --clr-bg: #F9F1EF; 
+    }
+}

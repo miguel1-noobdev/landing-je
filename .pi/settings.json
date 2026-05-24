@@ -1,0 +1,39 @@
+{
+	"subagents": {
+		"agentOverrides": {
+			"sdd-init": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-explore": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-proposal": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-spec": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-design": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-tasks": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-apply": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-verify": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-sync": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-archive": {
+				"model": "opencode/qwen3.6-plus-free"
+			},
+			"sdd-onboard": {
+				"model": "opencode/qwen3.6-plus-free"
+			}
+		}
+	}
+}
