@@ -24,14 +24,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Sticky Header Scroll Effect (Blur & Border)
+    // 2. Header hide on scroll down, show on scroll up
     const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
+    
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
             header.classList.add('scrolled');
+            
+            if (currentScrollY > lastScrollY) {
+                // Scrolling down -> hide
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up -> show
+                header.classList.remove('hidden');
+            }
         } else {
-            header.classList.remove('scrolled');
+            header.classList.remove('scrolled', 'hidden');
         }
+        
+        lastScrollY = currentScrollY;
     });
 
     // 3. Simple Form Submission simulation

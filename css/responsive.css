@@ -13,7 +13,7 @@
 @media (max-width: 900px) {
     /* Navigation Bar Mobile Layout */
     .nav__container {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
     
     .nav__actions.desktop-only {
