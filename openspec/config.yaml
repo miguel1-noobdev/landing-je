@@ -18,7 +18,7 @@ repository:
 vps:
   host: "212.227.149.125"
   user: "migue"
-  domain: "jessnails.ia-solutions.duckdns.org"
+  domain: "jessnails.duckdns.org"
   path: "/home/migue/webs/jessnails"
   ssl: true
 

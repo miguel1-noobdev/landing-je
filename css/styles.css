@@ -170,22 +170,47 @@ img {
     z-index: 1;
 }
 
-.hero__img-container {
+.hero__media-container {
     position: relative;
     border-radius: var(--radius-lg);
-    overflow: visible; /* To allow badges to float outside */
-    padding: 2rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    aspect-ratio: 4/5;
 }
 
-.hero__img {
+.hero__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-soft);
     transform: perspective(1000px) rotateY(-5deg);
     transition: var(--trans-smooth);
 }
 
-.hero__visual:hover .hero__img {
+.hero__visual:hover .hero__video {
     transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Fallback image inside video tag */
+.hero__video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+/* Ensure content stays above video */
+.hero__content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero__visual {
+    position: relative;
+    z-index: 1;
 }
 
 /* 🏛️ Buttons */
@@ -459,11 +484,15 @@ img {
         margin-bottom: var(--space-lg);
     }
     
-    .hero__img-container {
+    .hero__media-container {
         padding: 0;
+        aspect-ratio: 1 / 1;
+        max-width: 400px;
+        margin: 0 auto;
     }
     
-    .hero__img {
+    .hero__video,
+    .hero__video img {
         transform: none !important;
     }
     

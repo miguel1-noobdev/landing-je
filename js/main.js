@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Parallax Hero Image (Smooth Tilt)
+    // 4. Parallax Hero Video (Smooth Tilt)
     const heroVisual = document.querySelector('.hero__visual');
     if (heroVisual && !window.matchMedia('(max-width: 900px)').matches) {
         heroVisual.addEventListener('mousemove', (e) => {
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const xOffset = (clientX / window.innerWidth - 0.5) * 20;
             const yOffset = (clientY / window.innerHeight - 0.5) * 20;
             
-            const heroImg = heroVisual.querySelector('.hero__img');
-            gsap.to(heroImg, {
+            const heroVideo = heroVisual.querySelector('.hero__video');
+            gsap.to(heroVideo, {
                 rotateY: xOffset,
                 rotateX: -yOffset,
                 duration: 1,
@@ -78,13 +78,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         heroVisual.addEventListener('mouseleave', () => {
-            const heroImg = heroVisual.querySelector('.hero__img');
-            gsap.to(heroImg, {
+            const heroVideo = heroVisual.querySelector('.hero__video');
+            gsap.to(heroVideo, {
                 rotateY: -5,
                 rotateX: 0,
                 duration: 1.5,
                 ease: "elastic.out(1, 0.5)"
             });
         });
+    }
+
+    // 5. IntersectionObserver — Pausar video cuando no está visible
+    const heroVideo = document.querySelector('.hero__video');
+    if (heroVideo && 'IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    heroVideo.play().catch(() => {});
+                } else {
+                    heroVideo.pause();
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        videoObserver.observe(heroVideo);
     }
 });
