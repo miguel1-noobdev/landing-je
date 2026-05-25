@@ -250,4 +250,37 @@ document.addEventListener('DOMContentLoaded', () => {
             sectionObserver.observe(section);
         });
     }
+
+    // 8. Mobile Bottom Navigation — Hide on scroll down, show on scroll up
+    const mobileNav = document.querySelector('.mobile-nav');
+    
+    if (mobileNav && window.matchMedia('(max-width: 900px)').matches) {
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const currentScrollY = window.scrollY;
+                    
+                    if (currentScrollY > 100) {
+                        if (currentScrollY > lastScrollY) {
+                            // Scrolling down -> hide
+                            mobileNav.classList.add('hidden');
+                        } else {
+                            // Scrolling up -> show
+                            mobileNav.classList.remove('hidden');
+                        }
+                    } else {
+                        // At top -> always show
+                        mobileNav.classList.remove('hidden');
+                    }
+                    
+                    lastScrollY = currentScrollY;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    }
 });
