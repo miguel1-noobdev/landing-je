@@ -508,6 +508,114 @@ img {
     font-size: 1rem;
 }
 
+/* 📱 Social Media Section */
+.socials {
+    padding: 5rem 0;
+    background: var(--clr-bg);
+}
+
+.socials__subtitle {
+    color: var(--clr-text-muted);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.socials__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius-lg);
+    background: var(--clr-panel);
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
+    cursor: pointer;
+}
+
+.social-card__icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.social-card__icon svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--clr-text-muted);
+    transition: fill 0.4s ease;
+}
+
+.social-card__name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--clr-text-muted);
+    transition: color 0.4s ease;
+}
+
+/* Instagram */
+.social-card--instagram:hover {
+    border-color: #E4405F;
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(228, 64, 95, 0.25);
+}
+.social-card--instagram:hover .social-card__icon svg {
+    fill: #E4405F;
+}
+.social-card--instagram:hover .social-card__name {
+    color: #E4405F;
+}
+
+/* TikTok */
+.social-card--tiktok:hover {
+    border-color: #00f2ea;
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 242, 234, 0.25);
+}
+.social-card--tiktok:hover .social-card__icon svg {
+    fill: #00f2ea;
+}
+.social-card--tiktok:hover .social-card__name {
+    color: #00f2ea;
+}
+
+/* YouTube */
+.social-card--youtube:hover {
+    border-color: #FF0000;
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(255, 0, 0, 0.25);
+}
+.social-card--youtube:hover .social-card__icon svg {
+    fill: #FF0000;
+}
+.social-card--youtube:hover .social-card__name {
+    color: #FF0000;
+}
+
+/* Facebook */
+.social-card--facebook:hover {
+    border-color: #1877F2;
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(24, 119, 242, 0.25);
+}
+.social-card--facebook:hover .social-card__icon svg {
+    fill: #1877F2;
+}
+.social-card--facebook:hover .social-card__name {
+    color: #1877F2;
+}
+
 /* 💬 Testimonials */
 .testimonials {
     padding: 5rem 0;

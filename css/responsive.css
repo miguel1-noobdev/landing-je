@@ -129,6 +129,52 @@
     .contact__form-side {
         padding: 2rem 1.5rem;
     }
+    
+    /* Mobile Contact Form Improvements */
+    .contact__wrapper {
+        padding: 2rem 1rem;
+        border-radius: var(--radius-md);
+    }
+    
+    .contact__card {
+        border-radius: var(--radius-md);
+    }
+    
+    .contact__info {
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+    
+    .contact__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .contact__form-side {
+        padding: 2rem 1.5rem;
+        border-radius: 0 0 var(--radius-md) var(--radius-md);
+    }
+    
+    .form input, .form select, .form textarea {
+        width: 100%;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .socials__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .social-card {
+        padding: 2rem 1rem;
+    }
+    
+    .social-card__icon {
+        width: 48px;
+        height: 48px;
+    }
 }
 
 /* 🔒 No Scroll Utility */
