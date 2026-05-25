@@ -220,4 +220,34 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initialize
         updateCarousel();
     }
+
+    // 7. Mobile Bottom Navigation — Active state on scroll
+    const mobileNavItems = document.querySelectorAll('.mobile-nav__item');
+    const sections = document.querySelectorAll('section[id]');
+    
+    if (mobileNavItems.length > 0 && sections.length > 0) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-50% 0px -50% 0px',
+            threshold: 0
+        };
+        
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    mobileNavItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === `#${id}`) {
+                            item.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+    }
 });

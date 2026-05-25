@@ -706,6 +706,11 @@ img {
     color: var(--clr-primary);
 }
 
+/* 📱 Mobile Bottom Navigation */
+.mobile-nav {
+    display: none;
+}
+
 /* 📱 Mobile Responsive - Basics */
 @media (max-width: 900px) {
     .hero__grid {
